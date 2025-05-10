@@ -16,7 +16,7 @@ export default function PhoneWithBlur() {
       <div className="flex flex-col items-start px-0 pt-[21px] w-full h-[56px] z-2">
         <div className="flex flex-row justify-between items-center w-full h-[22px] px-[25px]">
           {/* Time */}
-          <span className={`${inter.className} font-bold text-[17px] leading-[22px] text-black antialiased`}>
+          <span className={`${inter.className} font-medium text-[17px] leading-[22px] text-black antialiased`}>
             9:41
           </span>
           {/* Status Bar Icons */}
@@ -25,8 +25,8 @@ export default function PhoneWithBlur() {
           </div>
         </div>
       </div>
-      <div className="absolute left-0 top-0 w-full h-[60px]">
-        <ProgressiveBlur intensity={2} curve="linear" overlayColor="transparent" direction="to top" className="absolute left-0 top-0 w-full h-[60px] z-1" />
+      <div className="absolute left-0 top-0 w-full h-[90px]">
+        <ProgressiveBlur intensity={2} curve="smooth" overlayColor="transparent" direction="to top" className="absolute left-0 top-0 w-full h-[90px] z-1" />
       </div>
       {/* Rest of the phone content can go here */}
     </div>

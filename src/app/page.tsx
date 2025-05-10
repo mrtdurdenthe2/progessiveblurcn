@@ -20,7 +20,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-start px-0 pt-[21px] w-full h-[56px]">
           <div className="flex flex-row justify-between items-center w-full h-[22px] px-[25px]"> {/* Added padding for visual spacing of status bar content */}
             {/* Time */}
-            <span className={`${inter.className} font-bold text-[17px] leading-[22px] text-black antialiased`}>
+            <span className={`${inter.className} font-medium text-[17px] leading-[22px] text-black antialiased`}>
               9:41
             </span>
             {/* Status Bar Icons */}
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         {/* Top Blur Mask */}
         <div
-          className="absolute left-0 top-0 w-full h-[60px] z-0 pointer-events-none overflow-hidden"
+          className="absolute left-0 top-0 w-full h-[90px] z-0 pointer-events-none overflow-hidden"
           style={{
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
