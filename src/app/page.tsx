@@ -1,9 +1,8 @@
-import Image from "next/image";
+
 import { Inter } from "next/font/google";
-import dynamic from "next/dynamic";
 
 // Lazy import to prevent SSR issues for WebGL component
-const ProgressiveBlur = dynamic(() => import("@/components/ProgressiveBlur"), { ssr: false });
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -29,10 +28,7 @@ export default function Home() {
           </div>
         </div>
         {/* Progressive Blur Overlay */}
-        <div className="absolute left-0 top-[56px] w-full" style={{ height: '120px' }}>
-          {/* The height matches the canvas and gradient area */}
-          <ProgressiveBlur imageSrc="/placeholder-map-bg.png" width={362} height={120} />
-        </div>
+
         {/* Rest of the phone content can go here */}
       </div>
 
