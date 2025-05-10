@@ -1,95 +1,61 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import { Inter } from "next/font/google";
+import dynamic from "next/dynamic";
+
+// Lazy import to prevent SSR issues for WebGL component
+const ProgressiveBlur = dynamic(() => import("@/components/ProgressiveBlur"), { ssr: false });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-row items-center justify-center min-h-screen p-8 gap-[133px]">
+      {/* Phone Mockup 1 */}
+      <div
+        className="relative flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden"
+        style={{ backgroundImage: "url('/placeholder-map-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        {/* Status Bar */}
+        <div className="flex flex-col items-start px-0 pt-[21px] w-full h-[56px]">
+          <div className="flex flex-row justify-between items-center w-full h-[22px] px-[25px]"> {/* Added padding for visual spacing of status bar content */}
+            {/* Time */}
+            <span className={`${inter.className} font-bold text-[17px] leading-[22px] text-black antialiased`}>
+              9:41
+            </span>
+            {/* Status Bar Icons */}
+            <div className="flex flex-row justify-center items-center">
+              {/* Assuming statusbaricons.svg contains all icons (wifi, signal, battery) */}
+              <img src="/statusbaricons.svg" alt="Status Icons" className="h-[13px]" /> {/* Adjusted height, original width might be too large */}
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* Progressive Blur Overlay */}
+        <div className="absolute left-0 top-[56px] w-full" style={{ height: '120px' }}>
+          {/* The height matches the canvas and gradient area */}
+          <ProgressiveBlur imageSrc="/placeholder-map-bg.png" width={362} height={120} />
+        </div>
+        {/* Rest of the phone content can go here */}
+      </div>
+
+      {/* Phone Mockup 2 */}
+      <div
+        className="flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden"
+        style={{ backgroundImage: "url('/placeholder-map-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        {/* Status Bar */}
+        <div className="flex flex-col items-start px-0 pt-[21px] w-full h-[56px]">
+          <div className="flex flex-row justify-between items-center w-full h-[22px] px-[25px]"> {/* Added padding for visual spacing of status bar content */}
+            {/* Time */}
+            <span className={`${inter.className} font-bold text-[17px] leading-[22px] text-black antialiased`}>
+              9:41
+            </span>
+            {/* Status Bar Icons */}
+            <div className="flex flex-row justify-center items-center">
+              <img src="/statusbaricons.svg" alt="Status Icons" className="h-[13px]" />
+            </div>
+          </div>
+        </div>
+        {/* Rest of the phone content can go here */}
+      </div>
     </div>
   );
 }
