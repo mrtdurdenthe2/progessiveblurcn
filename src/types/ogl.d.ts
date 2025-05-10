@@ -1,4 +1,4 @@
 declare module 'ogl' {
-  const value: any;
+  const value: unknown;
   export = value;
 }
