@@ -1,1 +1,19 @@
-{}
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "progessiveblurcn",
+    "homepage": "progressiveblurcn.vercel.app",
+    "items": [
+      {
+        "name": "progressiveblur",
+        "type": "registry:block",
+        "title": "Progressive Blur",
+        "description": "A progressive blur component using tailwindcss",
+        "files": [
+          {
+            "path": "registry/mainstyle/progressiveblur/progressiveblur.tsx",
+            "type": "registry:component"
+          }
+        ]
+      }
+    ]
+  }
