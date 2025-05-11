@@ -53,7 +53,7 @@ export default function Home() {
       {/* Command Line Container */}
       <div className="flex flex-col items-center w-[858px] h-[43px] px-[88px] gap-[10px]">
         <CopyCommand
-          command="npx shadcn@latest http://localhost:3000/r/progressiveblur.json"
+          command="npx shadcn@latest https://progressiveblurcn.vercel.app//r/progressiveblur.json"
           fontClassName={robotoMono.className}
         />
       </div>
