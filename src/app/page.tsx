@@ -16,7 +16,7 @@ export default function Home() {
 
         {/* Phone Mockup 2 */}
         <div
-          className="relative flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden"
+          className="relative flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden outline outline-1 outline-black/6"
           style={{ backgroundImage: "url('/placeholder-map-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           {/* Status Bar */}
@@ -42,7 +42,12 @@ export default function Home() {
               maskImage: 'linear-gradient(to top, transparent, black)'
             }}
           />
-
+          {/* Bottom Label */}
+          <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-[363px] h-[84px] flex flex-col justify-center items-center gap-[10px] bg-white rounded-b-[22px] z-1">
+            <span className={`${inter.className} text-[17px] leading-[22px] text-gray-500 flex items-center justify-center`}>
+              Backdrop blur with mask
+            </span>
+          </div>
         </div>
       </div>
       {/* Command Line Container */}
