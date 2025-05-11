@@ -24,3 +24,28 @@ If installing via the shadcn CLI, make sure your project is compatible with shad
 ```
 npx shadcn@latest https://progressiveblurcn.vercel.app/r/progressiveblur.json
 ```
+
+If installing manually, just copy the progressive blur file from the registry/mainstyle/progressiveblur
+
+## Usage Example
+
+``` tsx
+import { ProgressiveBlur } from 'registry/mainstyle/progressiveblur/progressiveblur'
+
+export default function HeroSection() {
+  return (
+    <div className="relative h-96 bg-[url('/hero.jpg')] bg-cover">
+      {/* Underlying image or content */}
+      <ProgressiveBlur
+        className="h-full w-full"
+        direction="to top"
+        intensity={3}
+        curve="exponential"
+      />
+      <h1 className="absolute bottom-8 left-8 text-white text-4xl">
+        Welcome to ProgreBlur
+      </h1>
+    </div>
+  )
+}
+```
