@@ -16,7 +16,7 @@ export default function Home() {
 
         {/* Phone Mockup 2 */}
         <div
-          className="relative flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden outline outline-1 outline-black/6"
+          className="relative flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden outline-2 outline-black/6"
           style={{ backgroundImage: "url('/placeholder-map-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           {/* Status Bar */}
@@ -28,8 +28,8 @@ export default function Home() {
               </span>
               {/* Status Bar Icons */}
               <div className="flex flex-row justify-center items-center">
-                <Image src="/statusbaricons.svg" alt="Status Icons" width={20} height={13} className="h-[13px]" />
-              </div>
+                    <Image src="/statusbaricons.svg" alt="Status Icons" width={70} height={22} />
+                </div>
             </div>
           </div>
           {/* Top Blur Mask */}
