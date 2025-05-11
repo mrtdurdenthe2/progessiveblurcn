@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { ProgressiveBlur } from './ui/progressblur'
 
@@ -22,7 +21,7 @@ export default function PhoneWithBlur() {
           </span>
           {/* Status Bar Icons */}
           <div className="flex flex-row justify-center items-center">
-            <Image src="/statusbaricons.svg" alt="Status Icons" width={20} height={13} className="h-[13px]" />
+            <img src="/statusbaricons.svg" alt="Status Icons" className="h-[13px]" />
           </div>
         </div>
       </div>

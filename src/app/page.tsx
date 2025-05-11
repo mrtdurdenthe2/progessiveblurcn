@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import PhoneWithBlur from "@/components/PhoneWithBlur";
-import Image from "next/image";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,7 +24,7 @@ export default function Home() {
             </span>
             {/* Status Bar Icons */}
             <div className="flex flex-row justify-center items-center">
-              <Image src="/statusbaricons.svg" alt="Status Icons" width={20} height={13} className="h-[13px]" />
+              <img src="/statusbaricons.svg" alt="Status Icons" className="h-[13px]" />
             </div>
           </div>
         </div>
