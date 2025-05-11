@@ -22,5 +22,5 @@ If installing via the shadcn CLI, make sure your project is compatible with shad
 
 ## Installation
 ```
-npx shadcn@latest
+npx shadcn@latest https://progressiveblurcn.vercel.app/r/progressiveblur.json
 ```
