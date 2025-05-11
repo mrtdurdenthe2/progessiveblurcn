@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "progressiveblurcn",
-  description: "ProgressiveBlur is a lightweight, declarative React component that renders a layered, progressive blur overlay using pure CSS. Its ideal for fading content out along an edge or creating a smooth “fog” effect over backgrounds, images, or video.",
+  description: "A progressive blur component",
 };
 
 export default function RootLayout({
