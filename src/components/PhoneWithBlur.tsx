@@ -99,7 +99,7 @@ export default function PhoneWithBlur() {
     <div className="relative">
       {/* Main Phone Structure */}
       <div
-        className="relative flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden outline-2 outline-black/6"
+        className="relative flex flex-col w-[90vw] max-w-[362px] aspect-[362/392] rounded-[22px] overflow-hidden outline-2 outline-black/6"
         style={{ backgroundImage: "url('/placeholder-map-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         {/* Status Bar */}
@@ -168,7 +168,7 @@ export default function PhoneWithBlur() {
               animate={{ opacity: 1, filter: 'blur(0px)' }}
               exit={{ opacity: 0, filter: 'blur(4px)' }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className="absolute top-[350px] transform -translate-y-1/2 right-full mr-2 w-[320px] bg-white rounded-xl shadow-lg z-10 overflow-hidden outline-1 outline-black/6"
+              className="absolute top-full left-1/2 mt-2 w-[90vw] max-w-[320px] transform -translate-x-1/2 bg-white rounded-xl shadow-lg z-43 overflow-hidden outline-1 outline-black/6 md:top-[350px] md:left-auto md:right-full md:mt-0 md:mr-2 md:-translate-y-1/2 md:translate-x-0 md:w-[320px]"
             >
               {/* Blur Intensity Row */}
               <div className="flex justify-between items-center px-4 py-3 min-h-[44px] border-b border-gray-200">

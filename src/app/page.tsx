@@ -9,14 +9,14 @@ const robotoMono = Roboto_Mono({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen min-w-screen max-h-screen max-w-screen p-8 gap-[50px]">
-      <div className="flex flex-row items-center justify-center gap-[133px]">
+    <div className="flex flex-col items-center justify-center min-h-screen min-w-screen max-h-screen max-w-screen p-4 md:p-8 gap-8 md:gap-[50px]">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[133px]">
         {/* Phone Mockup 1 (with Progressive Blur) */}
         <PhoneWithBlur/>
 
         {/* Phone Mockup 2 */}
         <div
-          className="relative flex flex-col w-[362px] h-[392px] rounded-[22px] overflow-hidden outline-2 outline-black/6"
+          className="relative flex flex-col w-[90vw] max-w-[362px] aspect-[362/392] rounded-[22px] overflow-hidden outline-2 outline-black/6"
           style={{ backgroundImage: "url('/placeholder-map-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           {/* Status Bar */}
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </div>
       {/* Command Line Container */}
-      <div className="flex flex-col items-center h-[43px] px-[88px] gap-[10px]">
+      <div className="flex flex-col items-center h-[43px] px-4 md:px-[88px] gap-[10px]">
         <CopyCommand
           command="npx shadcn@latest add https://progressiveblurcn.vercel.app/r/progressiveblur.json"
           fontClassName={robotoMono.className}

@@ -27,8 +27,11 @@ export default function CopyCommand({ command, fontClassName }: CopyCommandProps
       aria-label="Copy command"
       className="relative flex flex-row justify-center items-center px-[47px] py-[15px] gap-[10px] isolation-isolate bg-white border border-[rgba(0,0,0,0.06)] rounded-full cursor-pointer transition-colors duration-150 hover:bg-gray-50 hover:border-[rgba(0,0,0,0.1)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
     >
-      <span className={`${fontClassName} text-[17px] antialiased leading-[22px] text-[#4C4C4C] tracking-[-1px]`}>
+      <span className={`${fontClassName} text-[17px] antialiased leading-[22px] text-[#4C4C4C] tracking-[-1px] hidden md:inline-block`}>
         {command}
+      </span>
+      <span className={`${fontClassName} text-[17px] antialiased leading-[22px] text-[#4C4C4C] tracking-[-1px] md:hidden`}>
+        copy command
       </span>
       <span className="absolute left-[18px] w-[16px] h-[16px] z-10">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
